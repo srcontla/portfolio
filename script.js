@@ -51,10 +51,10 @@ const music = document.getElementById("music");
 btn.addEventListener("click", () => {
   if (music.paused) {
     music.play();
-    btn.textContent = "♫ OFF";
+    btn.textContent = "♫ Sound Off";
   } else {
     music.pause();
-    btn.textContent = "♫ PLAY";
+    btn.textContent = "♫ Sound On";
   }
 });
 
