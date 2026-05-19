@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofia Contla | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<!-- TOP BAR MOBILE / HAMBURGER MENU -->
+  <div class="mobile-topbar"> 
+    <img src="star.png" class="mobile-logo" onclick="showPage('home')">
+
+    <a class="mobile-ig" href="https://www.instagram.com/raw.sof" target="_blank">
+      @raw.sof
+    </a>
+
+    <button id="menuToggle">☰</button>
+
+  </div>
+  <div id="overlay" class="overlay"></div>
+<!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-container">
+
+  <!-- LOGO -->
+    <div class="slot logo-slot">
+      <img src="logo.gif" onclick="showPage('home')" alt="Logo">
+    </div>
+
+    <div class="slot tab"></div>
+
+  <!-- MÚSICA -->
+    <div class="slot music-slot">
+      <button id="musicToggle">♫ PLAY</button>
+      <audio id="music" loop>
+        <source src="song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div class="slot tab"></div>
+    <div class="slot tab"></div>
+
+  <!-- TABS DE PROYECTOS -->
+    <div class="slot tab" data-target="wines" onclick="showPage('wines')">Wines | Packaging</div>
+    <div class="divider"></div>
+    <div class="slot tab" data-target="naui" onclick="showPage('naui')">NAUI | Branding</div>
+    <div class="divider"></div>
+    <div class="slot tab" data-target="matches"onclick="showPage('matches')">Tlitl | Packaging</div>
+    <div class="divider"></div>
+    <!-- <div class="slot tab" data-target="magazine" onclick="showPage('magazine')">Magazine | Editorial</div>
+    <div class="divider"></div>
+    <div class="slot tab" data-target="band" onclick="showPage('band')">Concept Band | Art Direction</div> 
+    <div class="divider"></div> --->
+    <div class="slot tab" data-target="tallo" onclick="showPage('tallo')" alt="Tallo">Tallo | UX/UI</div>
+    <div class="divider"></div>
+    <div class="slot tab" data-target="lab" onclick="showPage('lab')" alt="Tallo">Digital Garden</div>
+    
+    <div class="slot tab"></div>
+    <div class="slot tab"></div>
+
+
+  <!-- FOOTER -->
+
+    <div class="slot footer-slot">
+      <div class="footer-item">
+        <div class="tab" data-target="about" onclick="showPage('about')">About</div>
+      </div>
+      <div class="footer-item">
+        <a href="https://www.instagram.com/raw.sof/" target="_blank"> Journal: @raw.sof </a>
+      </div>
+    </div>
+  </aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- HOME -->
+  <section id="home" class="page active">
+    <div class="hero" id="hero">
+      <img src="logo.gif" class="logo-gif" alt="Logo">
+      <h1> Sofia Contla </h1>
+      <h2>Graphic Design ✦ Branding ✦ Packaging</h2>
+    </div>
+    <section class="projects">
+      <img src="wine-cover.jpg" onclick="showPage('wines')" alt="Wines">
+      <img src="naui-cover.jpg" onclick="showPage('naui')" alt="NAUI">
+      <img src="matches-cover.jpg" onclick="showPage('matches')" alt="matches">
+      <!--
+      <img src="revista-cover.jpg" onclick="showPage('magazine')" alt="Magazine">
+      <img src="group-cover.jpg" onclick="showPage('band')" alt="band">
+      -->
+      <img src="tallo-cover.jpg" onclick="showPage('tallo')" alt="Tallo">
+    </section>
+
+    <div class="anuncio-wrapper">
+      <p class="anuncio-type">
+        Sofia Contla © 2026
+      </p>
+    </div>
+
+  </section>
+
+<!-- ---------- PÁGINAS SPA ---------- -->
+
+<!-- WINES SECTION -->
+  <section id="wines" class="page"> 
+
+  <!-- HERO SECTION -->
+    <div class="project-hero">
+      <img src="wine-cover.jpg" 
+     alt="Roxana & Ivanna Wine Packaging" class="hero-img" onclick="openLightbox(this)">
+      <div class="hero-text">
+        <h1>Roxana & Ivanna</h1>
+        <p class="hero-type">Packaging Design ✦ Illustration</p>
+        <p class="hero-desc">
+          A contemporary wine label series exploring contrast through two distinct identities — a soft rosé and a bold red. The packaging and illustration system bring a sense of casual luxury into everyday social moments.
+        </p>
+      </div>
+    </div>
+
+  <!-- PROJECT CONTENT -->
+    <div class="project-content">
+
+      <!-- IVANNA -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Ivanna</h2>
+          <p class="section-desc">
+            A softer rosé identity inspired by cozy rituals, slow evenings, and feminine comfort.
+          </p>
+        </div>
+        <div class="animate">
+          <img src="wine-extended-iva.jpg" onclick="openLightbox(this)">
+        </div>
+
+        <div class="no-anim">
+          <img src="wine-individual-iva.gif" onclick="openLightbox(this)">
+        </div>
+      </div>
+
+      <!-- ROXANNA -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Roxanna</h2>
+          <p class="section-desc">
+            A bold red identity influenced by nightlife, confidence, and playful chaos.
+          </p>
+        </div>
+        <div class="animate">
+          <img src="wine-extended-rox.jpg" onclick="openLightbox(this)">
+        </div>
+        <div class="no-anim">
+          <img src="wine-individual-rox.gif" onclick="openLightbox(this)">
+        </div>
+      </div>
+
+      <!-- CARRIERS -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Packaging System</h2>
+          <p class="section-desc">
+            Designed to carry the collection together, turning casual moments into shared rituals.
+          </p>
+        </div>
+        <div class="animate">
+          <img src="wine-carrier.jpg" onclick="openLightbox(this)">
+        </div>
+        <div class="section-header">
+          <p class="section-desc">
+            A minimal single-bottle carrier made for relaxed nights and everyday celebrations.
+          </p>
+        </div>
+        <div class="animate">
+          <img src="wine-carrier-single.jpg" onclick="openLightbox(this)">
+        </div>
+      </div>
+    </div>
+
+  <!--FOOTER WRAPER -->
+    <div class="anuncio-wrapper">
+        <p class="anuncio-type">
+          Sofia Contla © 2026
+        </p>
+    </div>
+  </section>
+
+<!-- NAUI SECTION -->
+
+  <section id="naui" class="page">
+
+  <!-- HERO SECTION -->
+    <div class="project-hero">
+      <img src="naui-cover.jpg" 
+     alt="Roxana & Ivanna Wine Packaging" class="hero-img" onclick="openLightbox(this)">
+      <div class="hero-text">
+        <h1>NAUI — Beauty Brand</h1>
+        <p class="hero-type">Brand Identity ✦ Packaging Design ✦ Visual System</p>
+        <p class="hero-desc">
+          A branding project focused on the development of a clean, skincare-inspired beauty brand.</p>
+        <p class="hero-desc">
+          The system explores a range of tinted lip treatments through color, packaging, and minimal graphic elements, creating a cohesive and adaptable visual identity across product and brand applications.
+        </p>
+      </div>
+    </div>
+
+  <!-- PROJECT CONTENT -->
+    <div class="project-content">
+
+    <!-- LOGO -->
+      <div class="content-section">
+        <div class="no-anim">
+          <img src="naui-logo-animation.gif" onclick="openLightbox(this)">
+        </div>
+      </div>
+
+    <!-- PRODUCT -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Product</h2>
+        </div>
+        <div class="animate">
+          <img src="naui-lipgloss.jpg" onclick="openLightbox(this)">
+        </div>
+        <div class="no-anim">
+          <img src="naui-lipgloss-gif.gif" onclick="openLightbox(this)">
+        </div>
+      </div>
+
+    <!-- PACKAGING -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Packaging</h2>
+        </div>
+        <div class="animate">
+          <img src="naui-dieline.jpg" onclick="openLightbox(this)">
+        </div>
+        <div class="no-anim">
+          <img src="naui-box-gif.gif" onclick="openLightbox(this)">
+        </div>
+      </div>
+
+    <!-- APPLICATIONS -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Applications</h2>
+        </div>
+        <div class="animate">
+          <img src="naui-totebag.jpg" onclick="openLightbox(this)">
+        </div>
+        <div class="animate">
+          <img src="naui-window.jpg" onclick="openLightbox(this)">
+        </div>
+      </div>
+
+    <!-- RESULT -->
+      <div class="project-final">
+        <img src="naui-combo.jpg" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+  <!--FOOTER WRAPER -->
+    <div class="anuncio-wrapper">
+      <p class="anuncio-type">
+        Sofia Contla © 2026
+      </p>
+    </div>
+
+  </section>
+  
+<!-- MATCHES SECTION -->
+
+  <section id="matches" class="page">
+
+  <!-- HERO SECTION -->
+    <div class="project-hero">
+       <img src="matches-cover.jpg" 
+       alt="Two boxes of matches with a design inspired by traditional Talavera pottery from Puebla, Mexico." class="hero-img" onclick="openLightbox(this)">
+      <div class="hero-text">
+        <h1>Tlitl — Matchbox Collection</h1>
+        <p class="hero-type">Packaging Design ✦ Illustration</p>
+        <p class="hero-desc">
+            A matchbox packaging concept inspired by Mexican talavera and traditional craftsmanship.
+        </p>
+        <p class="hero-desc">
+            The project explores cultural patterns and illustrative composition through contemporary visual storytelling, combining texture, color, and typography into a cohesive packaging system.
+        </p>
+      </div>
+    </div>
+
+  <!-- PROJECT CONTENT -->
+    <div class="project-content">
+      <div class="animate">
+        <img src="matches-dieline.png" onclick="openLightbox(this)">
+      </div>
+      <div class="project-final">
+        <img src="matches-animation.gif" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+    <!--FOOTER WRAPER -->
+      <div class="anuncio-wrapper">
+          <p class="anuncio-type">
+            Sofia Contla © 2026
+          </p>
+      </div>
+  </section>
+ 
+<!-- FUTUROS PROYECTOS A EDITAR  
+  < !-- MAGAZINE SECTION --
+  <section id="magazine" class="page">
+    <div class="project-hero">
+      <img src="foto1.jpg" 
+     alt="Roxana & Ivanna Wine Packaging" class="hero-img" onclick="openLightbox(this)">
+      <div class="hero-text">
+        <h1>EDITORIAL FEATURE</h1>
+        <p class="hero-type">Editorial Design · Layout</p>
+        <p class="hero-desc">
+          A magazine layout project exploring typography, grid systems, and visual hierarchy.
+        </p>
+        <p class="hero-desc">
+          The design focuses on creating a balanced reading experience through bold typography and structured editorial layouts.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-content">
+      < !-- aquí van mockups, imágenes, etc --
+    </div>
+  </section>
+  
+  < !-- BAND SECTION --
+  <section id="band" class="page">
+    <div class="project-hero">
+      <img src="foto1.jpg" 
+     alt="Roxana & Ivanna Wine Packaging" class="hero-img" onclick="openLightbox(this)">
+      <div class="hero-text">
+        <h1>NOX</h1>
+        <p class="hero-type">Concept Art Direction · Visual Identity</p>
+        <p class="hero-desc">
+          A conceptual music group inspired by mythological archetypes.
+        </p>
+        <p class="hero-desc">
+          Each member embodies a divine force, forming a unified visual universe that blends mythology, symbolism, and contemporary music aesthetics.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-content">
+      <.!-- aquí van mockups, imágenes, etc --
+    </div>
+  </section>
+  -->
+  
+<!-- TALLO SECTION -->
+  <section id="tallo" class="page">
+
+  <!-- HERO SECTION -->
+    <div class="project-hero">
+      <img src="tallo-intro.jpg" 
+     alt="Roxana & Ivanna Wine Packaging" class="hero-img" onclick="openLightbox(this)">
+      <div class="hero-text">
+        <h1>TALLO</h1>
+        <p class="hero-type">UX/UI Design ✦ Product Concept</p>
+        <p class="hero-desc">
+          A collaborative language learning app concept focused on making conversational practice feel safer, more approachable, and connected to real-life situations.
+        </p>
+      </div>
+    </div>
+
+  <!-- PROJECT CONTENT -->
+    <div class="project-content">
+
+    <!-- ABOUT THE PROJECT AND MY ROLL -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Overview</h2>
+        </div>
+        <div class="no-anim">
+          <img src="tallo-roadmap.png" onclick="openLightbox(this)">
+        </div>
+        <div class="section-header">
+          <p class="section-desc">
+            A collaborative project involving eight team members, developed over the course of three months.
+          </p>
+          <p class="section-desc">
+            My role focused on UI design, conducting user interviews, and supporting research throughout different stages of the project.
+          </p>
+        </div>
+      </div>
+
+    <!-- PROBLEMS AND SOLUTIONS -->
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Background & Research</h2>
+          <p class="section-desc">
+            Through an initial round of interviews with 20 individuals, we uncovered a gap between what users seeking to practice languages want—specifically the sense of security they seek—and the applications currently available on the market.
+          </p>
+        </div>
+        <div class="no-anim">
+          <img src="tallo-copetitors.png" onclick="openLightbox(this)">
+        </div>
+        <div class="section-header">
+          <p class="section-desc">
+            We identified three main areas in which current applications fall short
+          </p>
+          <p>
+            1- The Tinder Effect: Suspicious behavior from other users that prompts users to abandon the platform.
+          </p>
+          <p>
+            2- The Spotlight Effect: Feeling overwhelmed by face-to-face interactions with multiple people.
+          </p>
+          <p>
+            3- The Utility Gap: Despite practicing for extended periods, users do not feel capable of holding short conversations in real life.
+          </p>
+        </div>
+          <!-- SUBSECTION SOLUTION-->
+        <div class="section-header">
+          <h2 class="section-title">SOLUTION</h2>
+            <!-- AVATARS-->
+          <p class="section-desc">
+            To add an extra layer of privacy and reduce appearance anxiety, customizable avatars allow users to interact without showing their real face.
+          </p>
+        </div>
+        <div class="no-anim">
+          <img src="tallo-avatars.gif" class="static-img">
+        </div>
+          <!-- AI PRACTICE-->
+        <div class="section-header">
+          <p class="section-desc">
+            AI-powered scenarios simulate everyday conversations, helping users gradually transition from guided practice to real-world interaction.
+          </p>
+        </div>
+        <div class="no-anim">
+          <video autoplay muted loop playsinline>
+            <source src="tallo-scenario.mp4" type="video/mp4">
+          </video>
+        </div>
+          <!-- CHAT ROOMS-->
+        <div class="section-header">
+          <p class="section-desc">
+            Podcast-like discussion rooms centered around shared interests create a safer and more controlled environment for conversational practice.
+          </p>
+        </div>
+        <div class="no-anim">
+          <video autoplay muted loop playsinline>
+            <source src="tallo-room.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    <!-- TALLO BRANDING -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Brand Identity</h2>
+        </div>
+        <div class="no-anim">
+          <img src="tallo-logo.gif" onclick="openLightbox(this)">
+        </div>
+        <div class="animate">
+          <img src="tallo-app-icon.jpg" onclick="openLightbox(this)">
+        </div>
+      </div>
+
+
+    <!-- CONCLUSION -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">KEY TAKEAWAYS</h2>
+          <p class="section-desc">
+          This project strengthened my understanding of collaborative workflows, research-driven design, and the importance of creating emotionally safe digital experiences.
+          </p>
+        </div>
+        <div class="project-final">
+        <img src="tallo-final.jpg" onclick="openLightbox(this)">
+      </div>
+      </div>
+
+    </div>
+
+  <!--FOOTER WRAPER -->
+    <div class="anuncio-wrapper">
+        <p class="anuncio-type">
+          Sofia Contla © 2026
+        </p>
+    </div>
+  </section>
+
+<!-- ABOUT AND CONTACT SECTION -->
+  <section id="about" class="page">
+
+    <div class="about-container">
+      <div class="about-image">
+        <img src="foto1.jpg" alt="Sofia Contla">
+      </div>
+      <div class="about-text">
+        <h1>About</h1>
+        <p>
+          Hi, I’m Sofia — a graphic designer focused on branding, visual identity, and digital experiences.
+        </p>
+        <p>
+          My work combines storytelling, culture, and contemporary design to create visuals that feel thoughtful, expressive, and intentional across both print and digital spaces.        </p>
+      </div>
+
+      <div class="about-text">
+        <h1>Get in Touch</h1>
+        <p>contlatelier@gmail.com</p>
+        <p>
+          <a href="https://www.linkedin.com/in/sofiacontla" target="_blank">
+            LinkedIn
+          </a>
+        </p>
+        <p>
+          <a href="https://www.instagram.com/raw.sof/" target="_blank">
+            Instagram
+          </a>
+        </p>
+      </div>
+
+    </div>
+      
+  </section>
+  
+<!-- DIGITAL GARDEN SECTION -->
+  <section id="lab" class="page">
+    <div class="lab-hero">
+      <div class="about-container">
+        <div class="about-text">
+          <h1>Digital Garden</h1>
+          <p>
+            A space for visual experiments, studies, and creative explorations across branding, illustration, and digital design.
+          </p>
+          <p>
+            If you'd like to see more of my work, you can follow me on Instagram → <a href="https://www.instagram.com/raw.sof/" target="_blank">@raw.sof</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab-grid">
+
+      <div class="garden-item" data-desc="Light Study I, Photographic Study ">
+        <img src="gar-01.jpg" onclick="openLightbox(this)" data-desc="A photographic study of light interacting with still architecture, where natural rays create an almost narrative illusion of motion and breath.">
+      </div>
+
+      <div class="garden-item" data-desc="Motion Study I, Photographic Study">
+       <img src="gar-02.jpg" onclick="openLightbox(this)" data-desc="A street moment where motion blur and artificial light transform everyday movement into abstract neon-like trails.">
+      </div>
+
+      <div class="garden-item" data-desc="Motion Study II, Photographic Study">
+        <img src="gar-03.jpg" onclick="openLightbox(this)" data-desc="A composition exploring contrast between stillness and movement within public space, isolating a human subject amid urban flow.">
+      </div>
+
+      <div class="garden-item" data-desc="Glass Study, Photographic Study ">
+        <img src="gar-04.jpg" onclick="openLightbox(this)" data-desc="A visual experiment where glass reflections and overlapping liquids create unexpected color intersections within a minimal setup.">
+      </div>
+      
+      <div class="garden-item" data-desc="Poster Study I, Editorial Experiment">
+        <img src="gar-05.jpg" onclick="openLightbox(this)" data-desc="A contemporary reinterpretation of 1950s film poster aesthetics applied to a modern narrative.">
+      </div>
+      
+      <div class="garden-item" data-desc="Identity Study I, Packaging Experiment">
+        <img src="gar-06.jpg" onclick="openLightbox(this)" data-desc="A fictional music identity blending contrasting aesthetics of softness and intensity through packaging and visual branding.">
+      </div>
+      
+      <div class="garden-item" data-desc="Editorial Study I, Editorial Experiment">
+        <img src="gar-07.jpg" onclick="openLightbox(this)" data-desc="A reimagined editorial system for a young adult trilogy, exploring consistency through modular card-based layouts across three volumes.">
+      </div>
+      
+      <div class="garden-item" data-desc="Interface Study I, UI Experiment">
+        <img src="gar-08.jpg" onclick="openLightbox(this)" data-desc="A conceptual social reading platform exploring community-driven discovery and reading interaction through interface design.">
+      </div>
+      <!--
+      <div class="garden-item" data-desc="Night street with neon blur and human focus.">
+        <img src="foto1.jpg" onclick="openLightbox(this)" data-desc="Night street with neon blur and human focus.">
+      </div>
+      -->
+
+    </div>
+  </section>
+
+</main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img">
+    <p id="lightbox-caption"></p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
